@@ -1,380 +1,541 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="title" content="Rota dos Sonhos" />
-    <meta name="description" content=" A Jornada dos seus sonhos comeca aqui" />
-    <link rel="stylesheet" href="css/style.css">
-    <title>Rota dos Sonhos</title>
-</head>
-
-<head>
-    <!--links-->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!--favicon-->
+    <title>Rota do Sonhos</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-
-    <!--Css-->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,
-    700;1,900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,
-    700&display=swap" rel="stylesheet">
-
-    <!--Preload-->
-
-    <link rel="preload" as="image" href="img/" />
-
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
+    <!-- Loader -->
+    <div class="loader">
+        <div class="spinner"></div>
+        <p>Carregando sua jornada...</p>
+    </div>
 
-    <!--HEADER-->
-    <header class="header active">
+    <!-- Particles Container -->
+    <div class="particles-js"></div>
+
+    <!-- Header -->
+    <header class="header">
         <div class="container">
-            <a href="#" class="logo">
-                <img src="img/Logo RS.png" alt="logo">
-            </a>
-
-            <!--Botão Topo-->
-            <a href="#" class="back-top-btn" aria-label="topo">
-                <ion-icon name="arrow-up-outline"></ion-icon>
-            </a>
-
-            <nav class="navbar">
-                <ul class="navbar-list">
-                    <li class="navbar-item">
-                        <a href="#" class="navbar-link"> Home </a>
-                    </li>
-
-                    <li class="navbar-item">
-                        <a href="#serv" class="navbar-link"> Serviços </a>
-                    </li>
-
-                    <li class="navbar-item">
-                        <a href="contato.html" class="navbar-link"> contato </a>
-                    </li>
-
-                    <li class="navbar-item">
-                        <a href="#sobre" class="navbar-link"> Sobre nós</a>
-                    </li>
-
-                    <li class="navbar-item">
-                        <a href="#novos estudos" class="navbar-link"> Novos Estudos </a>
-                    </li>
-
-                    <li class="navbar-item">
-                        <a href="#" class="navbar-link"> Promoções </a>
-                    </li>
+            <div class="logo">
+               <img src="img/logo.png">
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#destinos">Destinos</a></li>
+                    <li><a href="#programas">Programas</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
-            <a href="#" class="btn">Logar</a>
-
-            <button class="search-btn" aria-label="Buscar">
-                <ion-icon name="search-outline"></ion-icon>
-            </button>
-
-            <button class="nav-toggle-btn" aria-label="menu mobile">
-                <ion-icon name="menu-outline"></ion-icon>
-            </button>
-
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <button class="cta-header" onclick="openModal('consulta')">Consulta Grátis</button>
         </div>
     </header>
 
-    <!--BANNER VIDEO-->
-    <section class="banner">
-        <video autoplay muted loop>
-            <source src="videos/Video.mp4">
-        </video>
-    </section>
-
-    <!--SERVIÇOS-->
-    <section class="service" aria-label="serviço" id="serv">
-        <div class="container-serv">
-            <ul class="service-list">
-                <li>
-                    <div class="service-card">
-                        <div class="card-icon">
-                            <img src="img/ci.png" alt="ci" width="75" height="75">
-                        </div>
-
-                        <h3 class="card-title">
-                            <a href="#">CI</a>
-                        </h3>
-
-                        <p class="card-text">
-                            O melhor curriculo do mundo é um passaporte.
-                        </p>
-
-                        <button class="btn-circle" aria-label="saiba mais">
-                            <ion-icon name="add-circle-outline"></ion-icon>
-                        </button>
-                    </div>
-                </li>
-
-                <li>
-                    <div class="service-card">
-                        <div class="card-icon">
-                            <img src="img/ie.png" alt="ie" width="75" height="75">
-                        </div>
-
-                        <h3 class="card-title">
-                            <a href="#">IE</a>
-                        </h3>
-
-                        <p class="card-text">
-                            Um mundo de oportunidades ao seu alcance.
-                        </p>
-
-                        <button class="btn-circle" aria-label="saiba mais">
-                            <ion-icon name="add-circle-outline"></ion-icon>
-                        </button>
-                    </div>
-                </li>
-
-                <li>
-                    <div class="service-card">
-                        <div class="card-icon">
-                            <img src="img/planet.png" alt="planet" width="75" height="75">
-                        </div>
-
-                        <h3 class="card-title">
-                            <a href="#">Planet</a>
-                        </h3>
-
-                        <p class="card-text">
-                            É a forma perfeita de você conhecer novos lugares e culturas.
-                        </p>
-
-                        <button class="btn-circle" aria-label="saiba mais">
-                            <ion-icon name="add-circle-outline"></ion-icon>
-                        </button>
-                    </div>
-                </li>
-
-                <li>
-                    <div class="service-card">
-                        <div class="card-icon">
-                            <img src="img/egali.png" alt="egali" width="75" height="75">
-                        </div>
-
-                        <h3 class="card-title">
-                            <a href="#">Egali</a>
-                        </h3>
-
-                        <p class="card-text">
-                            Uma viagem mais segura e economica.
-                        </p>
-
-                        <button class="btn-circle" aria-label="saiba mais">
-                            <ion-icon name="add-circle-outline"></ion-icon>
-                        </button>
-                    </div>
-                </li>
-            </ul>
-        </div>
-
-    </section>
-
-    <!--SOBRE-->
-    <section class="section about" aria-label="sobre" id="sobre">
-        <div class="container-sobre">
-            <figure class="about-banner">
-                <img src="img/arco do triunfo.png" alt="Arco" class="w-100" />
-            </figure>
-
-            <div class="about-content">
-                <p class="section-subtitle"> Sobre a Rota dos Sonhos</p>
-                <h2 class="section-title">
-                    Desperte o explorador dentro de você com a Rota dos Sonhos
-                </h2>
-                <p class="section-text-1">
-                    Na Rota dos Sonhos, viajar é viver experiências que transformam. Somos uma agência de intercâmbio
-                    cultural e educacional, com a missão de ajudar pessoas a realizarem o sonho de estudar, trabalhar ou
-                    explorar o mundo com propósito.
-
-                    Oferecemos suporte completo em destinos como Canadá, Austrália, Irlanda, Estados Unidos e muito mais
-                    do primeiro atendimento até o retorno pra casa. Nosso diferencial? Um atendimento humanizado, feito
-                    sob medida para cada história.
-
-                </p>
-                <a href="#" class="btn">Saiba mais</a>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content reveal">
+            <h1 class="typing-effect">Sua Jornada pelo <span class="gradient-text">Mundo</span> Começa Aqui</h1>
+            <p class="hero-lead">Aprenda novos idiomas, estude em universidades renomadas e conquiste oportunidades de trabalho no exterior com programas personalizados e suporte completo desde a inscrição até o retorno.</p>
+            <p class="hero-sub">Mais de 10.000 estudantes transformaram suas vidas conosco em 50+ destinos.</p>
+            <div class="hero-buttons">
+                <button class="cta-primary" onclick="openModal('inscricao')">
+                    <span>Inscreva-se Agora</span>
+                    <span class="icon">✈️</span>
+                </button>
+                <button class="cta-secondary" onclick="smoothScroll('#destinos')">
+                    Explorar Destinos
+                </button>
             </div>
         </div>
     </section>
 
-    <!--PARALLAX-->
-    <section class="parallax">
-        <div class="content">
-            <h1 class="text">Bem-vindo ao seu maior sonho!</h1>
-            <p class="text-parallax">
-                Explore os melhores pontos turísticos.
-            </p>
-            <a href="#" class="btn">Explore agora!</a>
-        </div>
-    </section>
-
-    <!--GALERIA DE PRODUTOS-->
-
-    <section class="section produto" aria-label="produto" id="novos estudos">
-        <div class="container-prod">
-            <div class="about-content">
-                <h2 class="h2 section-title">Novos Estudos</h2>
-            </div>
-
-            <div class="galeria">
-                <img src="img/Eiffel tower at night.jpg" alt="torre eifel">
-                <img src="img/coliseu (2).jpg" alt="coliseu">
-                <img src="img/estatua da liberdade.jpg" alt="estatua da liberdade">
-                <img src="img/londres.jpg" alt="londres">
-                <img src="img/sydynei.jpg" alt="sydynei">
-                <img src="img/Cristo Redentor.jpg" alt="torre eifel">
-                <img src="img/disney.jpg" alt="disney">
-                <img src="img/toquio.jpg" alt="toquio">
+    <!-- Stats Section -->
+    <section class="stats reveal">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3 data-target="10000" class="counter">0</h3>
+                    <p>Estudantes Satisfeitos</p>
+                </div>
+                <div class="stat-item">
+                    <h3 data-target="50" class="counter">0</h3>
+                    <p>Países Parceiros</p>
+                </div>
+                <div class="stat-item">
+                    <h3 data-target="98" class="counter">0</h3>
+                    <p>% de Satisfação</p>
+                </div>
+                <div class="stat-item">
+                    <h3 data-target="15" class="counter">0</h3>
+                    <p>Anos de Experiência</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!--  CONTATO -->
-    <section class="contato section">
-        <h2 class="h2 section-title">Fale conosco</h2>
-        <div class="container-contato">
-            
-            <div class="w60 formulario">
-                <h2>Contato</h2>
-                <form>
-                    <div class="input">
-                        <input placeholder="Digite o seu nome..." type="text" required>
+    <!-- Destinos Section -->
+    <section id="destinos" class="destinos">
+        <div class="container">
+            <h2 class="section-title reveal">Destinos Incríveis para sua Aventura</h2>
+            <p class="section-subtitle">Escolha entre cidades vibrantes e programas adaptados ao seu perfil.</p>
+            <div class="search-filter">
+                <input type="text" id="searchDestinos" placeholder="🔍 Busque por destino (ex: Canadá, Sydney)...">
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="america">América</button>
+                    <button class="filter-btn" data-filter="europe">Europa</button>
+                    <button class="filter-btn" data-filter="oceania">Oceania</button>
+                </div>
+            </div>
+            <div class="destinos-grid">
+                <div class="destino-card flip-card" data-category="america" data-name="canadá">
+                    <div class="flip-inner">
+                        <div class="flip-front">
+                            <img src="https://images.rawpixel.com/image_social_landscape/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvc2szNjAxLWltYWdlLWt3dnhiZ2cyLmpwZw.jpg" alt="Canadá - Toronto">
+                            <h3>🇨🇦 Canadá</h3>
+                            <p>Estude e trabalhe em Toronto ou Vancouver</p>
+                        </div>
+                        <div class="flip-back">
+                            <h3>Por que Canadá?</h3>
+                            <p>Imersão em inglês ou francês com permissão de trabalho. Qualidade de vida excepcional e natureza deslumbrante.</p>
+                            <ul>
+                                <li>✅ Visto fácil para estudantes</li>
+                                <li>✅ Até 20h/semana de trabalho</li>
+                                <li>✅ Custo médio: R$ 25.000/6 meses</li>
+                            </ul>
+                            <button class="cta-small" onclick="openModal('consulta')">Solicitar Orçamento</button>
+                        </div>
                     </div>
+                </div>
+                <div class="destino-card flip-card" data-category="oceania" data-name="austrália">
+                    <div class="flip-inner">
+                        <div class="flip-front">
+                            <img src="https://cdn.prod.website-files.com/64e21a34e41da63fe4f44c5a/67cf3c110c3aba17b4872fc9_pexels-brettstone-2845013.jpg" alt="Austrália - Sydney">
+                            <h3>🇦🇺 Austrália</h3>
+                            <p>Sydney: Inglês + praias incríveis</p>
+                        </div>
+                        <div class="flip-back">
+                            <h3>Por que Austrália?</h3>
+                            <p>Working Holiday Visa permite estudo e trabalho ilimitado. Clima quente o ano todo.</p>
+                            <ul>
+                                <li>✅ Salários altos (AU$20+/h)</li>
+                                <li>✅ Vida ao ar livre</li>
+                                <li>✅ Custo médio: R$ 28.000/6 meses</li>
+                            </ul>
+                            <button class="cta-small" onclick="openModal('consulta')">Solicitar Orçamento</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="destino-card flip-card" data-category="europe" data-name="espanha">
+                    <div class="flip-inner">
+                        <div class="flip-front">
+                            <img src="https://www.onceinalifetimejourney.com/wp-content/uploads/2020/07/Outside-Sagrada-Familia.jpg" alt="Espanha - Barcelona">
+                            <h3>🇪🇸 Espanha</h3>
+                            <p>Barcelona: Imersão em espanhol</p>
+                        </div>
+                        <div class="flip-back">
+                            <h3>Por que Espanha?</h3>
+                            <p>Cultura vibrante, gastronomia e clima mediterrâneo. Programas acessíveis.</p>
+                            <ul>
+                                <li>✅ Aulas + atividades culturais</li>
+                                <li>✅ Cidades históricas</li>
+                                <li>✅ Custo médio: R$ 20.000/6 meses</li>
+                            </ul>
+                            <button class="cta-small" onclick="openModal('consulta')">Solicitar Orçamento</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="destino-card flip-card" data-category="europe" data-name="irlanda">
+                    <div class="flip-inner">
+                        <div class="flip-front">
+                            <img src="https://asiaexchange.org/wp-content/uploads/2021/11/diogo-palhais-tnzzr8HpLhs-unsplash.jpg" alt="Irlanda - Dublin">
+                            <h3>🇮🇪 Irlanda</h3>
+                            <p>Dublin: Inglês autêntico</p>
+                        </div>
+                        <div class="flip-back">
+                            <h3>Por que Irlanda?</h3>
+                            <p>Inglês nativo com sotaque amigável. Pubs, música e natureza verde.</p>
+                            <ul>
+                                <li>✅ 25h/semana trabalho</li>
+                                <li>✅ Visto de 8 meses</li>
+                                <li>✅ Custo médio: R$ 22.000/6 meses</li>
+                            </ul>
+                            <button class="cta-small" onclick="openModal('consulta')">Solicitar Orçamento</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="destino-card flip-card" data-category="america" data-name="eua">
+                    <div class="flip-inner">
+                        <div class="flip-front">
+                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="EUA - Nova York">
+                            <h3>🇺🇸 EUA</h3>
+                            <p>Nova York: O sonho americano</p>
+                        </div>
+                        <div class="flip-back">
+                            <h3>Por que EUA?</h3>
+                            <p>Universidades top e cultura diversa. Programas OPT para trabalho.</p>
+                            <ul>
+                                <li>✅ Certificados reconhecidos</li>
+                                <li>✅ Networking global</li>
+                                <li>✅ Custo médio: R$ 30.000/6 meses</li>
+                            </ul>
+                            <button class="cta-small" onclick="openModal('consulta')">Solicitar Orçamento</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="destino-card flip-card" data-category="oceania" data-name="nova-zelândia">
+                    <div class="flip-inner">
+                        <div class="flip-front">
+                            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Nova Zelândia - Auckland">
+                            <h3>🇳🇿 Nova Zelândia</h3>
+                            <p>Aventura e natureza</p>
+                        </div>
+                        <div class="flip-back">
+                            <h3>Por que Nova Zelândia?</h3>
+                            <p>Paisagens épicas e qualidade de vida. Working Holiday disponível.</p>
+                            <ul>
+                                <li>✅ Esportes radicais</li>
+                                <li>✅ Inglês puro</li>
+                                <li>✅ Custo médio: R$ 26.000/6 meses</li>
+                            </ul>
+                            <button class="cta-small" onclick="openModal('consulta')">Solicitar Orçamento</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <div class="input">
-                        <input placeholder="Digite o seu email..." type="text" required>
+    <!-- Programas Section -->
+    <section id="programas" class="programas">
+        <div class="container">
+            <h2 class="section-title reveal">Nossos Programas Personalizados</h2>
+            <p class="section-subtitle">Encontre o programa perfeito para seus objetivos de estudo, trabalho e crescimento pessoal.</p>
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="idiomas">🗣️ Cursos de Idiomas</button>
+                <button class="tab-btn" data-tab="estudantil">🎓 Intercâmbio Universitário</button>
+                <button class="tab-btn" data-tab="trabalho">💼 Trabalho no Exterior</button>
+            </div>
+            <div class="tab-contents">
+                <div id="idiomas" class="tab-content active">
+                    <div class="program-grid">
+                        <div class="program-card reveal">
+                            <h3>Inglês Intensivo</h3>
+                            <p>Aulas diárias com foco em conversação e certificação IELTS/TOEFL.</p>
+                            <ul>
+                                <li>20-30 aulas/semana</li>
+                                <li>Acomodação inclusa</li>
+                                <li>Suporte 24/7</li>
+                            </ul>
+                            <button class="cta-primary-small">Saiba Mais</button>
+                        </div>
+                        <div class="program-card reveal">
+                            <h3>Espanhol Imersão</h3>
+                            <p>Aprenda vivendo a cultura espanhola em Madri ou Barcelona.</p>
+                            <ul>
+                                <li>Aulas + atividades</li>
+                                <li>Certificado DELE</li>
+                                <li>Grupo pequeno</li>
+                            </ul>
+                            <button class="cta-primary-small">Saiba Mais</button>
+                        </div>
                     </div>
+                </div>
+                <div id="estudantil" class="tab-content">
+                    <div class="program-grid">
+                        <div class="program-card reveal">
+                            <h3>High School</h3>
+                            <p>Ensino médio no exterior com família hospedeira.</p>
+                            <ul>
+                                <li>1 ano escolar</li>
+                                <li>Bolsas disponíveis</li>
+                                <li>Experiência cultural</li>
+                            </ul>
+                            <button class="cta-primary-small">Saiba Mais</button>
+                        </div>
+                        <div class="program-card reveal">
+                            <h3>Graduação/ Pós</h3>
+                            <p>Universidades parceiras com crédito transferível.</p>
+                            <ul>
+                                <li>Parcerias globais</li>
+                                <li>OPT nos EUA</li>
+                                <li>Auxílio financeiro</li>
+                            </ul>
+                            <button class="cta-primary-small">Saiba Mais</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="trabalho" class="tab-content">
+                    <div class="program-grid">
+                        <div class="program-card reveal">
+                            <h3>Au Pair</h3>
+                            <p>Viva como parte da família, cuide de crianças e aprenda o idioma.</p>
+                            <ul>
+                                <li>Salário + moradia</li>
+                                <li>Aulas de idioma</li>
+                                <li>Férias pagas</li>
+                            </ul>
+                            <button class="cta-primary-small">Saiba Mais</button>
+                        </div>
+                        <div class="program-card reveal">
+                            <h3>Working Holiday</h3>
+                            <p>Trabalhe e viaje livremente em países como Austrália e NZ.</p>
+                            <ul>
+                                <li>Visto de 1-2 anos</li>
+                                <li>Empregos flexíveis</li>
+                                <li>Aventura total</li>
+                            </ul>
+                            <button class="cta-primary-small">Saiba Mais</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="quiz-section reveal">
+                <h3>Qual Programa é Ideal para Você?</h3>
+                <p>Responda 3 perguntas rápidas e receba uma recomendação personalizada!</p>
+                <button class="cta-primary" onclick="startQuiz()">Iniciar Quiz Grátis</button>
+                <div id="quiz-container" style="display: none;">
+                    <!-- Quiz gerado via JS -->
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <div class="input">
-                        <input placeholder="Digite o seu Telefone..." type="text" required>
+    <!-- Depoimentos Section -->
+    <section id="depoimentos" class="depoimentos">
+        <div class="container">
+            <h2 class="section-title reveal">Histórias que Inspiram</h2>
+            <p class="section-subtitle">Veja o que nossos intercambistas dizem sobre a experiência.</p>
+            <div class="testimonial-slider">
+                <div class="slider-track">
+                    <div class="testimonial-card">
+                        <img src="https://via.placeholder.com/80x80/F9FAFB/14B8A6?text=MS" alt="Maria Silva" class="testimonial-img">
+                        <p>"Meu intercâmbio no Canadá foi transformador! Aprendi inglês fluente, trabalhei e fiz amigos para a vida toda."</p>
+                        <span>- Maria Silva, Toronto</span>
                     </div>
+                    <div class="testimonial-card">
+                        <img src="https://via.placeholder.com/80x80/F9FAFB/F97316?text=JO" alt="João Oliveira" class="testimonial-img">
+                        <p>"A Austrália superou minhas expectativas. Equilíbrio perfeito entre estudos, trabalho e praias incríveis!"</p>
+                        <span>- João Oliveira, Sydney</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="https://via.placeholder.com/80x80/F9FAFB/14B8A6?text=AC" alt="Ana Costa" class="testimonial-img">
+                        <p>"Barcelona me ensinou espanhol e me apaixonou pela cultura. Recomendo 100%!"</p>
+                        <span>- Ana Costa, Barcelona</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="https://via.placeholder.com/80x80/F9FAFB/F97316?text=LP" alt="Lucas Pereira" class="testimonial-img">
+                        <p>"Como Au Pair na Irlanda, ganhei independência e um segundo idioma. Inesquecível!"</p>
+                        <span>- Lucas Pereira, Dublin</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="https://via.placeholder.com/80x80/F9FAFB/14B8A6?text=SF" alt="Sofia Ferreira" class="testimonial-img">
+                        <p>"Estudei em Nova Zelândia e me apaixonei pela natureza. O suporte da agência foi impecável."</p>
+                        <span>- Sofia Ferreira, Auckland</span>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-dots"></div>
+            <button class="slider-prev">❮</button>
+            <button class="slider-next">❯</button>
+        </div>
+    </section>
 
-                    <div class="input">
-                        <textarea placeholder="Seu texto..."></textarea>
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title reveal">Perguntas Frequentes</h2>
+            <p class="section-subtitle">Encontre respostas rápidas ou nos contate para dúvidas personalizadas.</p>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Como funciona o visto de estudante?</span>
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="accordion-body">
+                        <p>Auxiliamos em todo o processo: matrícula, documentos, entrevista e aprovação. Taxa de sucesso de 98%.</p>
                     </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Posso trabalhar durante o intercâmbio?</span>
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="accordion-body">
+                        <p>Sim! Em destinos como Canadá, Austrália e Irlanda, você pode trabalhar até 20-40h/semana.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Qual o custo total?</span>
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="accordion-body">
+                        <p>Varia de R$ 15.000 a R$ 40.000 por 6 meses, incluindo curso, acomodação e suporte.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Há bolsas de estudo?</span>
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="accordion-body">
+                        <p>Sim, oferecemos bolsas parciais em programas universitários e idiomas.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Como é o suporte pós-chegada?</span>
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="accordion-body">
+                        <p>Grupo no WhatsApp, orientação local e assistência 24/7 durante toda a estadia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <div class="btn">
-                        <input type="submit" name="enviar" value="enviar">
+    <!-- Contato Section -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <h2 class="section-title reveal">Pronto para Começar sua Jornada?</h2>
+            <p class="section-subtitle">Agende uma consulta gratuita e tire todas as suas dúvidas com nossos especialistas.</p>
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <h3>Entre em Contato</h3>
+                    <ul>
+                        <li>📧 contato@intercambioglobal.com</li>
+                        <li>📞 +55 (11) 99999-9999</li>
+                        <li>📍 Rua Exemplo, 123 - São Paulo, SP</li>
+                        <li>🕒 Segunda a Sexta: 9h-18h</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">📸</a>
+                        <a href="#" aria-label="TikTok">🎵</a>
+                        <a href="#" aria-label="YouTube">📺</a>
                     </div>
+                </div>
+                <form id="contactForm" class="contact-form reveal">
+                    <input type="text" placeholder="Seu Nome" required>
+                    <input type="email" placeholder="Seu Email" required>
+                    <input type="tel" placeholder="Seu WhatsApp" required>
+                    <select required>
+                        <option value="">Interesse Principal</option>
+                        <option value="idiomas">Cursos de Idiomas</option>
+                        <option value="estudantil">Intercâmbio Universitário</option>
+                        <option value="trabalho">Trabalho no Exterior</option>
+                    </select>
+                    <textarea placeholder="Sua Mensagem (opcional)" rows="4"></textarea>
+                    <button type="submit" class="cta-primary">Enviar Mensagem</button>
                 </form>
             </div>
-
-            <div class="w40">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.091751382378!2d-45.42848392466759!3d-23.636884978747922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cd631551d2d585%3A0xbe6efd4b81fb3cd0!2sInstituto%20Federal%20de%20Educa%C3%A7%C3%A3o%2C%20Ci%C3%AAncia%20e%20Tecnologia%20de%20S%C3%A3o%20Paulo%20-%20IFSP%20C%C3%A2mpus%20Caraguatatuba!5e0!3m2!1spt-BR!2sbr!4v1749064152252!5m2!1spt-BR!2sbr"
-                    width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-            </div>
-
-
         </div>
     </section>
 
-
-
-
-    <!--Rodapé-->
+    <!-- Footer -->
     <footer class="footer">
-        <div class="section footer-top">
-            <div class="container-footer">
-                <div class="footer-brand">
-                    <a href="#" class="logo">
-                        <img src="img/logo.png" alt="logo" width="150" height="75" />
-                    </a>
-
-                    <p class="footer-text">
-                        Na Rota dos Sonhos, viajar é viver experiências que transformam.
-                    </p>
-
-                    <ul class="social-list">
-
-                        <li>
-                            <a href="#" class="social-link">
-                                <ion-icon name="logo-facebook"></ion-icon>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#" class="social-link">
-                                <ion-icon name="logo-instagram"></ion-icon>
-                            </a>
-                        </li>
-
-                    </ul>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>🌍 Intercâmbio Global</h4>
+                    <p>Sua ponte confiável para estudar, trabalhar e explorar o mundo.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">📸</a>
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="WhatsApp">💬</a>
+                    </div>
                 </div>
-
-                <div>
-                    <p class="title footer-list-title">Links Ùteis</p>
-
+                <div class="footer-col">
+                    <h5>Destinos Populares</h5>
                     <ul>
-                        <li>
-                            <a href="#" class="footer-link">Politica de Privacidade</a>
-                        </li>
-
-                        <li>
-                            <a href="#" class="footer-link">Termos de Uso</a>
-                        </li>
-
-                        <li>
-                            <a href="#" class="footer-link">Contato</a>
-                        </li>
+                        <li><a href="#">Canadá</a></li>
+                        <li><a href="#">Austrália</a></li>
+                        <li><a href="#">Espanha</a></li>
+                        <li><a href="#">Irlanda</a></li>
                     </ul>
                 </div>
-
-                <div class="footer-list">
-                    <p class="title footer-list-title">Fale Conosco</p>
-
-                    <div class="contact-item">
-                        <span class="span">Localização</span>
-
-                        <address class="contact-link">
-                            Av. Maria Fonseca, 1789 - Indaiá
-                        </address>
-                    </div>
-
-                    <div class="contact-item">
-                        <span class="span">Telefone</span>
-
-                        <a href="#" class="contact-link">(12) 9810-96847</a>
-                    </div>
+                <div class="footer-col">
+                    <h5>Programas</h5>
+                    <ul>
+                        <li><a href="#">Idiomas</a></li>
+                        <li><a href="#">Universitário</a></li>
+                        <li><a href="#">Trabalho</a></li>
+                    </ul>
                 </div>
-
-                <div class="footer-list">
-                    <p class="title footer-list-title">Boletim</p>
-
-                    <form class="footer-form">
-                        <input type="email" name="email" required placeholder="Digite seu email..." class="input-field">
-                    </form>
+                <div class="footer-col">
+                    <h5>Suporte</h5>
+                    <ul>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
                 </div>
             </div>
-        </div>
-
-        <div class="footer-bottom">
-            <div>
-                <p class="copyright">
-                    &copy; 2025 Rota dos Sonhos - Todos os direitos reservados.
-                </p>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Intercâmbio Global. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <!--js-->
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de mais informações sobre intercâmbio." class="wa-float" target="_blank">
+        💬 WhatsApp
+    </a>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" onclick="smoothScroll('#home')">
+        ⬆️
+    </button>
+
+    <!-- Modals -->
+    <div id="modal-inscricao" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('inscricao')">&times;</span>
+            <h2>Inscreva-se Agora</h2>
+            <form id="inscricaoForm">
+                <input type="text" placeholder="Nome Completo" required>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="WhatsApp" required>
+                <select required>
+                    <option value="">Programa de Interesse</option>
+                    <option value="idiomas">Cursos de Idiomas</option>
+                    <option value="estudantil">Intercâmbio Universitário</option>
+                    <option value="trabalho">Trabalho no Exterior</option>
+                </select>
+                <button type="submit" class="cta-primary">Confirmar Inscrição</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="modal-consulta" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('consulta')">&times;</span>
+            <h2>Consulta Grátis</h2>
+            <p>Em 24h, um consultor entrará em contato!</p>
+            <form id="consultaForm">
+                <input type="text" placeholder="Nome" required>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="WhatsApp" required>
+                <button type="submit" class="cta-primary">Agendar</button>
+            </form>
+        </div>
+    </div>
+
     <script src="js/script.js"></script>
-
-    <!--ion icon-->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
-
 </body>
-
 </html>
